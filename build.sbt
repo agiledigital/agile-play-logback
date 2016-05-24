@@ -18,7 +18,6 @@ lazy val commonSettings = Seq(
   ),
   // Disable scaladoc generation when building dist.
   sources in(Compile, doc) := Seq.empty,
-  publishArtifact in(Compile, packageDoc) := false,
   updateOptions := updateOptions.value.withCachedResolution(true),
   concurrentRestrictions in Global := Seq(
     Tags.limitSum(1, Tags.Compile, Tags.Test),
